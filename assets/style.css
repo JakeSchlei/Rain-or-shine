@@ -47,3 +47,12 @@ header {
     background-color: black;
 }
 
+.forecast-weather {
+  padding: 10px 30px;
+    border-right: 1px solid gray;
+}
+
+.forecast-weather:last-child {
+    border-right: none;
+}
+
