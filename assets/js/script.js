@@ -74,7 +74,7 @@ function getForecast({ lat, lon, city }) {
               <div class="forecast-weather">
               <h5>${forecastDate}</h5>
               <img src=${`http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`} />
-              <p>Temp: ${data.list[i].main.temp}°</p>
+              <p>Temp: ${parseInt(data.list[i].main.temp)}°</p>
               <p>Humidity: ${data.list[i].main.humidity}%</p>
               <p>Wind: ${data.list[i].wind.speed} MPH</p>
               </div>`;
@@ -96,6 +96,7 @@ function storeSearchHistory(city) {
 function buildButton(city) {
   let div = document.createElement("div");
   div.innerHTML = city;
+  div.className = 'city-button'
   div.addEventListener("click", () => findCity(city));
 
   return div;
@@ -105,7 +106,7 @@ function buildSearchHistory() {
   let searchHistory = localStorage.getItem("searchHistory");
   if (!searchHistory) return;
   searchHistory = JSON.parse(searchHistory);
-  for (let i = 0; i <= searchHistory.length; i++) {
+  for (let i = 0; i < searchHistory.length; i++) {
     const button = buildButton(searchHistory[i]);
     cityList.appendChild(button);
   }
