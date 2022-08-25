@@ -14,7 +14,8 @@ To be able to see weather for any city and an extended forecast
 OpenWeather
 
 ### Screenshot
-![screencapture-file-C-Users-Jake-Documents-bootcamp-stuff-Homework-Rain-or-shine-app-index-html-2022-08-24-22_46_55 (1)](https://user-images.githubusercontent.com/108429837/186585088-e13b6f9e-fdf9-4954-b49c-ef013e5f9851.png)
+![Rain or Shine!](https://user-images.githubusercontent.com/108429837/186772293-187227e1-2478-4264-aabe-1524bdff6313.png)
+
 
 ### Pages Link
 
