@@ -8,6 +8,42 @@ body {
     height: 100vh;
     background-image: url('https://source.unsplash.com/1600x900/?weather');
     background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 
 }
+
+header {
+    background-color: rgba(0, 0, 0, .6);
+
+}
+
+#weather-box {
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+#city-list {
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+
+
+#forecast {
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.card {
+    background-color: rgba(0, 0, 50.2, .6);
+}
+
+#search-btn {
+    background-color: rgba(0, 0, 0, .6);
+
+}
+#search-btn:hover {
+    background-color: black;
+}
+
