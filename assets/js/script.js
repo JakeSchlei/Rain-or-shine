@@ -76,7 +76,7 @@ function getForecast({ lat, lon, city }) {
               <img src=${`http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`} />
               <p>Temp: ${parseInt(data.list[i].main.temp)}°</p>
               <p>Humidity: ${data.list[i].main.humidity}%</p>
-              <p>Wind: ${data.list[i].wind.speed} MPH</p>
+              <p>Wind: ${parseInt(data.list[i].wind.speed)} MPH</p>
               </div>`;
       }
     });
