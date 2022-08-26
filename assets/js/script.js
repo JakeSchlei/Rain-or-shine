@@ -7,7 +7,7 @@ const cityList = document.querySelector("#city-list");
 
 searchBtn.addEventListener("click", () => findCity(citySearch.value));
 function findCity(city) {
-  const cityUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
+  const cityUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
   fetch(cityUrl)
     .then((res) => res.json())
     .then((data) => {
@@ -43,7 +43,7 @@ function getCurrentWeather({ lat, lon, city }) {
       }
 
       currentWeather.innerHTML = `<h3>${city} (${createDate})</h3>
-        <img src=${`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
+        <img src=${`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
         <div class='weather-details'>
             <p>Temperature: ${parseInt(data.main.temp)}°</p>
             <p>Humidity: ${data.main.humidity}%</p>
@@ -73,7 +73,7 @@ function getForecast({ lat, lon, city }) {
         forecast.innerHTML += `
               <div class="forecast-weather">
               <h5>${forecastDate}</h5>
-              <img src=${`http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`} />
+              <img src=${`https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`} />
               <p>Temp: ${parseInt(data.list[i].main.temp)}°</p>
               <p>Humidity: ${data.list[i].main.humidity}%</p>
               <p>Wind: ${parseInt(data.list[i].wind.speed)} MPH</p>
